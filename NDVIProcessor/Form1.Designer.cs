@@ -52,6 +52,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -184,6 +186,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.picNir);
             this.groupBox1.Controls.Add(this.picRgb);
             this.groupBox1.Controls.Add(this.lblNir);
@@ -196,11 +200,12 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Inputs";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // picNir
             // 
             this.picNir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picNir.Location = new System.Drawing.Point(528, 24);
+            this.picNir.Location = new System.Drawing.Point(419, 24);
             this.picNir.Name = "picNir";
             this.picNir.Size = new System.Drawing.Size(206, 143);
             this.picNir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -210,18 +215,19 @@
             // picRgb
             // 
             this.picRgb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picRgb.Location = new System.Drawing.Point(307, 24);
+            this.picRgb.Location = new System.Drawing.Point(198, 24);
             this.picRgb.Name = "picRgb";
             this.picRgb.Size = new System.Drawing.Size(206, 143);
             this.picRgb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picRgb.TabIndex = 11;
             this.picRgb.TabStop = false;
+            this.picRgb.Click += new System.EventHandler(this.picRgb_Click);
             // 
             // lblNir
             // 
             this.lblNir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
             this.lblNir.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblNir.Location = new System.Drawing.Point(66, 132);
+            this.lblNir.Location = new System.Drawing.Point(15, 136);
             this.lblNir.Name = "lblNir";
             this.lblNir.Size = new System.Drawing.Size(166, 15);
             this.lblNir.TabIndex = 10;
@@ -232,7 +238,7 @@
             // 
             this.lblRgb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRgb.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblRgb.Location = new System.Drawing.Point(64, 72);
+            this.lblRgb.Location = new System.Drawing.Point(13, 76);
             this.lblRgb.Name = "lblRgb";
             this.lblRgb.Size = new System.Drawing.Size(169, 15);
             this.lblRgb.TabIndex = 9;
@@ -247,7 +253,7 @@
             this.btnLoadNir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadNir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadNir.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnLoadNir.Location = new System.Drawing.Point(67, 99);
+            this.btnLoadNir.Location = new System.Drawing.Point(16, 103);
             this.btnLoadNir.Name = "btnLoadNir";
             this.btnLoadNir.Size = new System.Drawing.Size(151, 30);
             this.btnLoadNir.TabIndex = 6;
@@ -263,7 +269,7 @@
             this.btnLoadRgb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadRgb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadRgb.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnLoadRgb.Location = new System.Drawing.Point(69, 39);
+            this.btnLoadRgb.Location = new System.Drawing.Point(18, 43);
             this.btnLoadRgb.Name = "btnLoadRgb";
             this.btnLoadRgb.Size = new System.Drawing.Size(151, 30);
             this.btnLoadRgb.TabIndex = 5;
@@ -340,6 +346,40 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "GUIDELINES:";
             // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(638, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 62);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Select GNU Octave/MATLAB Color Mapping Method:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1 - Autumn",
+            "2 - Bone",
+            "3 - Jet",
+            "4 - Winter",
+            "5 - Rainbow",
+            "6 - Ocean",
+            "7 - Summer",
+            "8 - Sprint",
+            "9 - Cool",
+            "10 - HSV",
+            "11 - Pink",
+            "12 -Hot"});
+            this.comboBox1.Location = new System.Drawing.Point(636, 81);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 25);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -400,6 +440,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

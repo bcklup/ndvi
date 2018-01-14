@@ -22,6 +22,7 @@ namespace NDVIProcessor
         public string nirdir = "";
         public string rgbdir = "";
         public string outdir = "";
+        public int cmap;
 
         int mouseX = 0, mouseY = 0, mouseinX = 0, mouseinY = 0;
         bool mouseDown;
@@ -136,8 +137,8 @@ namespace NDVIProcessor
                     Process python;
                     pythonInfo.FileName = @"C:\Program Files (x86)\Python36-32\python.exe";
                     //pythonInfo.Arguments = string.Format("{0} -n {1} -r {2} -o {3}", AppDomain.CurrentDomain.BaseDirectory + "ndvi.py", nirdir, rgbdir, saveFileDialog1.FileName);
-                    pythonInfo.Arguments = "\""+AppDomain.CurrentDomain.BaseDirectory+"ndvi.py"+"\""+" -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName+"\"";
-                    
+                    pythonInfo.Arguments = "\""+AppDomain.CurrentDomain.BaseDirectory+"ndvi.py"+"\""+" -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName+"\" -c \""+cmap+"\"";
+                    //MessageBox.Show(pythonInfo.Arguments);
                     //MessageBox.Show(pythonInfo.Arguments);
                     pythonInfo.CreateNoWindow = false;
                     pythonInfo.UseShellExecute = false;
@@ -164,6 +165,25 @@ namespace NDVIProcessor
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void picRgb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cmap = comboBox1.SelectedIndex;
         }
     }
 }
