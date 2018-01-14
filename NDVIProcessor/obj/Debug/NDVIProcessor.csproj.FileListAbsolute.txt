@@ -1,0 +1,10 @@
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\bin\Debug\NDVIProcessor.exe.config
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\bin\Debug\NDVIProcessor.exe
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\bin\Debug\NDVIProcessor.pdb
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.csprojResolveAssemblyReference.cache
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.Form1.resources
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.Properties.Resources.resources
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.csproj.GenerateResource.Cache
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.exe
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.pdb
+e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Debug\NDVIProcessor.Loading.resources
