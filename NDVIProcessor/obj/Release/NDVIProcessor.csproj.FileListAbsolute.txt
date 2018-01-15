@@ -8,3 +8,13 @@ e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\R
 e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.csproj.GenerateResource.Cache
 e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.exe
 e:\gians\documents\visual studio 2013\Projects\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.pdb
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\bin\Release\NDVIProcessor.exe.config
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.exe
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.pdb
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\bin\Release\NDVIProcessor.exe
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\bin\Release\NDVIProcessor.pdb
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.csprojResolveAssemblyReference.cache
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.Form1.resources
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.Loading.resources
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.Properties.Resources.resources
+E:\NDVI chuchu\NDVIProcessor\NDVIProcessor\obj\Release\NDVIProcessor.csproj.GenerateResource.Cache
