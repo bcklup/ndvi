@@ -25,13 +25,18 @@ def main(argv):
             outputfile = arg 
         elif opt in ("-c", "--cmap"):
             cmap = arg
-    nir = cv2.imread(nirfile,0)
+    nir = cv2.imread(nirfile,1)
     red = cv2.imread(rgbfile,1)
+    
+    bgmap = cv2.applyColorMap(nir,int(cmap))
+    nir = nir-red
     temp = cv2.split(red)
     red=temp[2]
     
-    np.seterr(invalid='ignore')
+    temp = cv2.split(nir)
+    nir = temp[2]
 
+    np.seterr(invalid='ignore')
     ndvi = (nir-red)/(nir+red)
 
     print(ndvi)
@@ -39,6 +44,7 @@ def main(argv):
     cv2.imwrite(outputfile,ndvi)
     reload = cv2.imread(outputfile,0)
     reload = cv2. applyColorMap(reload,int(cmap))
+    reload = cv2.addWeighted(bgmap,0.5,reload,0.5,0.0)
     cv2.imwrite(outputfile,reload)
 
 if __name__ == "__main__":
