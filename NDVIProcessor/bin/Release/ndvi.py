@@ -39,12 +39,12 @@ def main(argv):
     np.seterr(invalid='ignore')
     ndvi = (nir-red)/(nir+red)
 
-    print(ndvi)
+    print(str(cv2.countNonZero(ndvi)* 0.0000004))
 
     cv2.imwrite(outputfile,ndvi)
     reload = cv2.imread(outputfile,0)
     reload = cv2. applyColorMap(reload,int(cmap))
-    reload = cv2.addWeighted(bgmap,0.5,reload,0.5,0.0)
+    reload = cv2.addWeighted(bgmap,0.3,reload,0.7,0.0)
     cv2.imwrite(outputfile,reload)
 
 if __name__ == "__main__":

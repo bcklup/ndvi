@@ -40,6 +40,8 @@
             this.txtLog = new System.Windows.Forms.TextBox();
             this.picOut = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.picNir = new System.Windows.Forms.PictureBox();
             this.picRgb = new System.Windows.Forms.PictureBox();
             this.lblNir = new System.Windows.Forms.Label();
@@ -52,8 +54,8 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -202,6 +204,40 @@
             this.groupBox1.Text = "Inputs";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1 - Autumn",
+            "2 - Bone",
+            "3 - Jet",
+            "4 - Winter",
+            "5 - Rainbow",
+            "6 - Ocean",
+            "7 - Summer",
+            "8 - Sprint",
+            "9 - Cool",
+            "10 - HSV",
+            "11 - Pink",
+            "12 -Hot"});
+            this.comboBox1.Location = new System.Drawing.Point(636, 81);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 25);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(638, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(137, 62);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Select GNU Octave/MATLAB Color Mapping Method:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // picNir
             // 
             this.picNir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -346,39 +382,26 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "GUIDELINES:";
             // 
-            // label6
+            // button3
             // 
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(638, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 62);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Select GNU Octave/MATLAB Color Mapping Method:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button3.BackColor = System.Drawing.Color.ForestGreen;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(884, 556);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(192, 45);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "PYTHON.EXE DIRECTORY";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // openFileDialog2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "1 - Autumn",
-            "2 - Bone",
-            "3 - Jet",
-            "4 - Winter",
-            "5 - Rainbow",
-            "6 - Ocean",
-            "7 - Summer",
-            "8 - Sprint",
-            "9 - Cool",
-            "10 - HSV",
-            "11 - Pink",
-            "12 -Hot"});
-            this.comboBox1.Location = new System.Drawing.Point(636, 81);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(139, 25);
-            this.comboBox1.TabIndex = 16;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.openFileDialog2.Filter = "EXE |*.exe";
+            this.openFileDialog2.Title = "Find python.exe versoin 3.6";
             // 
             // Form1
             // 
@@ -388,6 +411,7 @@
             this.BackgroundImage = global::NDVIProcessor.Properties.Resources.ndvibg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -442,6 +466,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.OpenFileDialog openFileDialog2;
     }
 }
 

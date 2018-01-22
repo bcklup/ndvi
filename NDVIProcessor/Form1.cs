@@ -22,6 +22,7 @@ namespace NDVIProcessor
         public string nirdir = "";
         public string rgbdir = "";
         public string outdir = "";
+        public string pythDir = "C:\\Program Files (x86)\\Python36-32";
         public int cmap;
 
         int mouseX = 0, mouseY = 0, mouseinX = 0, mouseinY = 0;
@@ -129,22 +130,23 @@ namespace NDVIProcessor
 
         private void btnRun_Click(object sender, EventArgs e)
         {
-            if (IsVarsSet()) {
+            if (IsVarsSet())
+            {
                 DialogResult result = saveFileDialog1.ShowDialog();
                 if (result == DialogResult.OK)
                 {
                     ProcessStartInfo pythonInfo = new ProcessStartInfo();
                     Process python;
-                    pythonInfo.FileName = @"C:\Program Files (x86)\Python36-32\python.exe";
+                    pythonInfo.FileName = pythDir;
                     //pythonInfo.Arguments = string.Format("{0} -n {1} -r {2} -o {3}", AppDomain.CurrentDomain.BaseDirectory + "ndvi.py", nirdir, rgbdir, saveFileDialog1.FileName);
-                    pythonInfo.Arguments = "\""+AppDomain.CurrentDomain.BaseDirectory+"ndvi.py"+"\""+" -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName+"\" -c \""+cmap+"\"";
+                    pythonInfo.Arguments = "\"" + AppDomain.CurrentDomain.BaseDirectory + "ndvi.py" + "\"" + " -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName + "\" -c \"" + cmap + "\"";
                     //MessageBox.Show(pythonInfo.Arguments);
                     //MessageBox.Show(pythonInfo.Arguments);
                     pythonInfo.CreateNoWindow = false;
                     pythonInfo.UseShellExecute = false;
                     pythonInfo.RedirectStandardOutput = true;
                     Loading frm = new Loading();
-                    frm.ShowDialog ();
+                    frm.ShowDialog();
 
                     python = Process.Start(pythonInfo);
 
@@ -153,12 +155,24 @@ namespace NDVIProcessor
                     txtLog.Text = log;
                     python.Close();
                     MessageBox.Show(this, "Operation Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    picOut.Image = Image.FromFile(saveFileDialog1.FileName);
+                    try
+                    {
+                        Image img;
+                        using (Stream stream = File.OpenRead(saveFileDialog1.FileName))
+                        {
+                            img = System.Drawing.Image.FromStream(stream);
+                        }
+                        picOut.Image = img;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Select RGB and NiR Image to process.", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    MessageBox.Show("Select RGB and NiR Image to process.", "Eror", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -170,6 +184,15 @@ namespace NDVIProcessor
         private void picRgb_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult result = openFileDialog2.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                pythDir = openFileDialog2.FileName;
+            }
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
