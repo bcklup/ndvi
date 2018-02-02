@@ -139,7 +139,7 @@ namespace NDVIProcessor
                     Process python;
                     pythonInfo.FileName = pythDir;
                     //pythonInfo.Arguments = string.Format("{0} -n {1} -r {2} -o {3}", AppDomain.CurrentDomain.BaseDirectory + "ndvi.py", nirdir, rgbdir, saveFileDialog1.FileName);
-                    pythonInfo.Arguments = "\"" + AppDomain.CurrentDomain.BaseDirectory + "ndvi.py" + "\"" + " -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName + "\" -c \"" + cmap + "\"";
+                    pythonInfo.Arguments = "\"" + AppDomain.CurrentDomain.BaseDirectory + "ndvi.py" + "\"" + " -n \"" + nirdir + "\" -r \"" + rgbdir + "\" -o \"" + saveFileDialog1.FileName + "\"";
                     //MessageBox.Show(pythonInfo.Arguments);
                     //MessageBox.Show(pythonInfo.Arguments);
                     pythonInfo.CreateNoWindow = false;

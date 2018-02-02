@@ -150,9 +150,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NDVIProcessor.Properties.Resources._try;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(29, 28);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 263);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
@@ -221,27 +222,29 @@
             "10 - HSV",
             "11 - Pink",
             "12 -Hot"});
-            this.comboBox1.Location = new System.Drawing.Point(636, 81);
+            this.comboBox1.Location = new System.Drawing.Point(631, 126);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(139, 25);
             this.comboBox1.TabIndex = 16;
+            this.comboBox1.Visible = false;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(638, 24);
+            this.label6.Location = new System.Drawing.Point(633, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(137, 62);
             this.label6.TabIndex = 15;
             this.label6.Text = "Select GNU Octave/MATLAB Color Mapping Method:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Visible = false;
             // 
             // picNir
             // 
             this.picNir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picNir.Location = new System.Drawing.Point(419, 24);
+            this.picNir.Location = new System.Drawing.Point(549, 24);
             this.picNir.Name = "picNir";
             this.picNir.Size = new System.Drawing.Size(206, 143);
             this.picNir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -251,7 +254,7 @@
             // picRgb
             // 
             this.picRgb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picRgb.Location = new System.Drawing.Point(198, 24);
+            this.picRgb.Location = new System.Drawing.Point(284, 24);
             this.picRgb.Name = "picRgb";
             this.picRgb.Size = new System.Drawing.Size(206, 143);
             this.picRgb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -263,18 +266,18 @@
             // 
             this.lblNir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic);
             this.lblNir.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblNir.Location = new System.Drawing.Point(15, 136);
+            this.lblNir.Location = new System.Drawing.Point(26, 134);
             this.lblNir.Name = "lblNir";
-            this.lblNir.Size = new System.Drawing.Size(166, 15);
+            this.lblNir.Size = new System.Drawing.Size(228, 17);
             this.lblNir.TabIndex = 10;
-            this.lblNir.Text = "NiR Input is missing or invalid.";
+            this.lblNir.Text = "NiR+Red Input is missing or invalid.";
             this.lblNir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRgb
             // 
             this.lblRgb.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRgb.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblRgb.Location = new System.Drawing.Point(13, 76);
+            this.lblRgb.Location = new System.Drawing.Point(53, 74);
             this.lblRgb.Name = "lblRgb";
             this.lblRgb.Size = new System.Drawing.Size(169, 15);
             this.lblRgb.TabIndex = 9;
@@ -289,11 +292,11 @@
             this.btnLoadNir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadNir.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadNir.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnLoadNir.Location = new System.Drawing.Point(16, 103);
+            this.btnLoadNir.Location = new System.Drawing.Point(56, 101);
             this.btnLoadNir.Name = "btnLoadNir";
             this.btnLoadNir.Size = new System.Drawing.Size(151, 30);
             this.btnLoadNir.TabIndex = 6;
-            this.btnLoadNir.Text = "OPEN NiR FILE";
+            this.btnLoadNir.Text = "OPEN NiR+RED FILE";
             this.btnLoadNir.UseVisualStyleBackColor = false;
             this.btnLoadNir.Click += new System.EventHandler(this.btnLoadNir_Click);
             // 
@@ -305,7 +308,7 @@
             this.btnLoadRgb.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadRgb.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoadRgb.ForeColor = System.Drawing.Color.ForestGreen;
-            this.btnLoadRgb.Location = new System.Drawing.Point(18, 43);
+            this.btnLoadRgb.Location = new System.Drawing.Point(58, 41);
             this.btnLoadRgb.Name = "btnLoadRgb";
             this.btnLoadRgb.Size = new System.Drawing.Size(151, 30);
             this.btnLoadRgb.TabIndex = 5;
