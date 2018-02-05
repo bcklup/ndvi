@@ -52,7 +52,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.openFileDialog2 = new System.Windows.Forms.OpenFileDialog();
@@ -270,7 +269,7 @@
             this.lblNir.Name = "lblNir";
             this.lblNir.Size = new System.Drawing.Size(228, 17);
             this.lblNir.TabIndex = 10;
-            this.lblNir.Text = "NiR+Red Input is missing or invalid.";
+            this.lblNir.Text = "NiR Input is missing or invalid.";
             this.lblNir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblRgb
@@ -296,7 +295,7 @@
             this.btnLoadNir.Name = "btnLoadNir";
             this.btnLoadNir.Size = new System.Drawing.Size(151, 30);
             this.btnLoadNir.TabIndex = 6;
-            this.btnLoadNir.Text = "OPEN NiR+RED FILE";
+            this.btnLoadNir.Text = "OPEN NiR";
             this.btnLoadNir.UseVisualStyleBackColor = false;
             this.btnLoadNir.Click += new System.EventHandler(this.btnLoadNir_Click);
             // 
@@ -359,29 +358,13 @@
             this.saveFileDialog1.Filter = "PNG |*.png|JPEG |*.jpg";
             this.saveFileDialog1.Title = "Save Output as:";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.ForestGreen;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(884, 155);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(192, 45);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "GENERATE GUIDANCE MAP";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.PaleGreen;
             this.label5.Location = new System.Drawing.Point(881, 222);
             this.label5.Name = "label5";
             this.label5.Padding = new System.Windows.Forms.Padding(5);
-            this.label5.Size = new System.Drawing.Size(195, 316);
+            this.label5.Size = new System.Drawing.Size(195, 358);
             this.label5.TabIndex = 6;
             this.label5.Text = "GUIDELINES:";
             // 
@@ -393,7 +376,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(884, 556);
+            this.button3.Location = new System.Drawing.Point(884, 156);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(192, 45);
             this.button3.TabIndex = 7;
@@ -416,7 +399,6 @@
             this.ClientSize = new System.Drawing.Size(1100, 700);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnRun);
             this.Controls.Add(this.panel2);
@@ -464,7 +446,6 @@
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
